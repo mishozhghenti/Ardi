@@ -47,6 +47,7 @@
         app:layout_marginRightPercent="10%">
 
         <TextView
+            android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
@@ -58,15 +59,17 @@
 
 
         <TextView
+            android:id="@+id/language"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:background="@drawable/main_title_language_rounded"
+            android:onClick="onClickLang"
             android:paddingBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:paddingTop="8dp"
-            android:text="@string/ka"
+            android:text="@string/en"
             android:textColor="#fff"
             android:textSize="28dp" />
     </android.support.percent.PercentRelativeLayout>
@@ -94,6 +97,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/my_page_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/my_page_icon"
@@ -127,6 +131,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/ardimedi_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ardimedi_icon"
@@ -161,6 +166,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/sos_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/sos_icon"
@@ -195,6 +201,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/info_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/info_icon"
@@ -227,6 +234,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/calculator_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/calculator_icon"
@@ -261,6 +269,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/ardicard_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ardicard_icon"
@@ -294,6 +303,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/zarali_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/zarali_icon"
@@ -328,6 +338,7 @@
             app:layout_widthPercent="40%" />
 
         <TextView
+            android:id="@+id/contact_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cntact_icon"

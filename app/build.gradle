@@ -26,5 +26,6 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'me.neavo:volley:2014.12.09'
     compile 'com.android.support:percent:23.1.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
 
 }

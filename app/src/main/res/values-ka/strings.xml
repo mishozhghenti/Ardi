@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Ardi</string>
     <string name="action_settings">Settings</string>
+
+    <string name="my_page">ჩემი გვერდი</string>
+    <string name="calculator">კალკულატორი</string>
+    <string name="ardimedi">არდიმედი</string>
+    <string name="ardi_sos">არდი SOS</string>
+    <string name="ardi_card">არდი ქარდი</string>
+    <string name="zarali">ზარალი</string>
+    <string name="info">ინფორმაცია</string>
+    <string name="contacct">კონტაქტი</string>
+    <string name="main">მთავარი</string>
+    <string name="ka">ქარ</string>
+    <string name="en">EN</string>
 </resources>

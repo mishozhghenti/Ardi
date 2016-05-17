@@ -1,6 +1,7 @@
 package ge.ardi.mobapp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,15 +13,56 @@ import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Locale;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    @Bind(R.id.home)
+    TextView homeTextView;
+
+    @Bind(R.id.language)
+    TextView languageTextView;
+
+    @Bind(R.id.my_page_text)
+    TextView myPageTextView;
+
+    @Bind(R.id.calculator_text)
+    TextView calculatorTextView;
+
+    @Bind(R.id.ardimedi_text)
+    TextView arimediTextView;
+
+    @Bind(R.id.ardicard_text)
+    TextView ardicardTextView;
+
+    @Bind(R.id.sos_text)
+    TextView sosTextView;
+
+    @Bind(R.id.zarali_text)
+    TextView zaraliTextView;
+
+    @Bind(R.id.info_text)
+    TextView infoTextView;
+
+    @Bind(R.id.contact_text)
+    TextView contactTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+
+
+
 
      /*   Map<String, String> data = new HashMap<>();
         String URL = "http://beladent-001-site1.htempurl.com/api/Values/?value=misho2";
@@ -109,5 +151,35 @@ public class MainActivity extends AppCompatActivity {
     public void chooseOnClick(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(intent, 1);
+    }
+
+
+    public void onClickLang(View view) {
+        String languageToLoad = "";
+        if (languageTextView.getText().equals("ქარ")) {
+            languageToLoad = "en";
+            languageTextView.setText(getString(R.string.en));
+        } else {
+            languageToLoad = "ka";
+            languageTextView.setText(getString(R.string.ka));
+
+        }
+
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
+        homeTextView.setText(getString(R.string.main));
+        myPageTextView.setText(getString(R.string.my_page));
+        calculatorTextView.setText(getString(R.string.calculator));
+        arimediTextView.setText(getString(R.string.ardimedi));
+        ardicardTextView.setText(getString(R.string.ardi_card));
+        sosTextView.setText(getString(R.string.ardi_sos));
+        zaraliTextView.setText(getString(R.string.zarali));
+        infoTextView.setText(getString(R.string.info));
+        contactTextView.setText(getString(R.string.contacct));
     }
 }
