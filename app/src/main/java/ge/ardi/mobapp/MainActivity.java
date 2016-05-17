@@ -7,15 +7,11 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
 
@@ -25,8 +21,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+     /*   Map<String, String> data = new HashMap<>();
+        String URL = "http://beladent-001-site1.htempurl.com/api/Values/?value=misho2";
+        data.put("key","saxli");
+        new SendDataToServer(data, URL, getApplicationContext());
+        Log.e("aaa", "wevida");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
              */
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             mySelectedImage.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-            byte[] byteArray = byteArrayOutputStream .toByteArray();
+            byte[] byteArray = byteArrayOutputStream.toByteArray();
 
             String bitMapString = Base64.encodeToString(byteArray, Base64.DEFAULT);
 
@@ -98,8 +98,9 @@ public class MainActivity extends AppCompatActivity {
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
 
-            ImageView imageView = (ImageView) findViewById(R.id.selected_image);
-            imageView.setImageBitmap(decodedByte);
+
+          /*  ImageView imageView = (ImageView) findViewById(R.id.selected_image);
+            imageView.setImageBitmap(decodedByte);*/
 
 
         }

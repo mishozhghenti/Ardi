@@ -32,10 +32,7 @@ public class SendDataToServer {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        if (control < 2) {
-                            control++;
-                            send(data, url, context);
-                        }
+
                         Log.e(url, String.valueOf(control));
                     }
                 }) {
