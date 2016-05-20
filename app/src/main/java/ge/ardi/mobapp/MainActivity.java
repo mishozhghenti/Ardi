@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -60,9 +61,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-
-
-
+        setFonts();
+     /*   final List<NameValuePair> args = new ArrayList<NameValuePair>();
+        args.add(new BasicNameValuePair("Email", "guka@yahoo.com"));
+        args.add(new BasicNameValuePair("Password","Aa@1234567!"));
+        args.add(new BasicNameValuePair("ConfirmPassword", "Aa@1234567!"));
+        final JSONHttpClient jsonHttpClient = new JSONHttpClient();
+        
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("here","here1");
+                jsonHttpClient.PostParams("http://greenhillsstudio.com/api/account/register/", args, null);
+                Log.e("here","here2");
+            }
+        }).start();*/
 
      /*   Map<String, String> data = new HashMap<>();
         String URL = "http://beladent-001-site1.htempurl.com/api/Values/?value=misho2";
@@ -155,16 +168,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClickLang(View view) {
+
         String languageToLoad = "";
         if (languageTextView.getText().equals("ქარ")) {
             languageToLoad = "en";
-            languageTextView.setText(getString(R.string.en));
         } else {
             languageToLoad = "ka";
-            languageTextView.setText(getString(R.string.ka));
-
         }
-
+        
         Locale locale = new Locale(languageToLoad);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
@@ -172,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
 
+        languageTextView.setText(getString(R.string.language));
         homeTextView.setText(getString(R.string.main));
         myPageTextView.setText(getString(R.string.my_page));
         calculatorTextView.setText(getString(R.string.calculator));
@@ -181,5 +193,26 @@ public class MainActivity extends AppCompatActivity {
         zaraliTextView.setText(getString(R.string.zarali));
         infoTextView.setText(getString(R.string.info));
         contactTextView.setText(getString(R.string.contacct));
+    }
+
+
+    public void myPageListener(View view) {
+        Intent goToMyPage = new Intent(getApplicationContext(), MyPage.class);
+        startActivity(goToMyPage);
+    }
+
+    private void setFonts() {
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "bpg_nino_mtavruli_normal.ttf");
+
+        languageTextView.setTypeface(myTypeface);
+        homeTextView.setTypeface(myTypeface);
+        myPageTextView.setTypeface(myTypeface);
+        calculatorTextView.setTypeface(myTypeface);
+        arimediTextView.setTypeface(myTypeface);
+        ardicardTextView.setTypeface(myTypeface);
+        sosTextView.setTypeface(myTypeface);
+        zaraliTextView.setTypeface(myTypeface);
+        infoTextView.setTypeface(myTypeface);
+        contactTextView.setTypeface(myTypeface);
     }
 }

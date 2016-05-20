@@ -11,6 +11,26 @@
     <string name="info">Useful Info</string>
     <string name="contacct">Contacts</string>
     <string name="main">Home</string>
-    <string name="ka">ქარ</string>
-    <string name="en">ENG</string>
+    <string name="language">ENG</string>
+    <string name="title_activity_my_page">MyPage</string>
+    <string name="authotization">რეგისტრაცია</string>
+    <string name="title_activity_registration">Registration</string>
+
+
+    <string name="enter">Enter</string>
+    <string name="authorization">Authorization</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="birthday">Birthday</string>
+    <string name="id">Personal ID</string>
+    <string name="mobile">Mobile</string>
+    <string name="e_mail">e-mail</string>
+    <string name="policy_number">Policy number</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="next">Next</string>
+    <string name="registration">Registration</string>
+
 </resources>

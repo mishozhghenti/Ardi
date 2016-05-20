@@ -11,6 +11,25 @@
     <string name="info">ინფორმაცია</string>
     <string name="contacct">კონტაქტი</string>
     <string name="main">მთავარი</string>
-    <string name="ka">ქარ</string>
-    <string name="en">EN</string>
+    <string name="language">ქარ</string>
+
+    <string name="enter">შესვლა</string>
+    <string name="authorization">ავტორიზაცია</string>
+    <string name="forget_password">დაგავიწყდათ პაროლი?</string>
+    <string name="first_name">სახელი</string>
+    <string name="last_name">გვარი</string>
+    <string name="birthday">დაბადების თარიღი</string>
+    <string name="id">პირადი ნომერი</string>
+    <string name="mobile">მობილური</string>
+
+
+    <string name="e_mail">ელ. ფოსტა</string>
+    <string name="policy_number">პოლისის ნომერი</string>
+    <string name="user">მომხმარებელი</string>
+    <string name="password">პაროლი</string>
+    <string name="confirm_password">პაროლის დადასტურება</string>
+    <string name="next">შემდეგი</string>
+    <string name="registration">რეგისტრაცია</string>
+
+
 </resources>
